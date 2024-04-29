@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="../style.css">
+      <title>Favorite Quotes and Websites</title>
+      <script>
+         /*this script prompts user for information */
+        var favNumber = prompt("Hello! Please input your favorite number for a customized experience.");
+        document.write("<h2>Thank you for submitting your favorite number, " + favNumber + "! Your favorite number will be used to customize your quote for today.</h2>");
+      </script>
+   </head>
+   <body>
+      <header>
+         <h1>Favorite Quotes and Websites Page</h1>
+      </header>
+      <nav>
+         <a href="index.html">JavaScript Home</a> | <a href="about.html">About Placeholder</a> | <a href="contact.html">Contact Placeholder</a> | <a href="contact.html">Assignments Placeholder</a> | <a href="contact.html">Contact Placeholder</a> | <a href="quotes.html">Quotes</a> | <a href="secret-number-game.html">Game</a> | <a href="quiz.html">Quiz</a> | <a href="trivia.html">Trivia</a>
+      </nav>
+      <main>
+      <section>
+         <h2>Quotes & Websites</h2>
+         <article>
+            <h3>Please find your customized quote below:</h3>
+            <script>
+               /* this script takes user information from the initial prompt, stores it in an array, performs a calculation and displays info on page */
+               var quoteModulus = favNumber % 5;
+               document.write("<p>Your custom quote is Quote " + quoteModulus + "!</p>");
+               /* this script creates array with 5 quote of the day */
+               var quotes = ['Failure is not the opposite of success, it\'s a part of success', 'Every system is perfectly designed to get the results it gets', 'Every accomplishment starts with the decision to try', 'Its never too late to be what you might have been', 'We are what we repeatedly do'];
+               /* pulls element 2 */
+               document.write("<p>Your quote is: " + quotes[quoteModulus] + ".</p>" );
+               /*creates the user URL array */
+               var urls = [];
+               var urls = ['https://www.google.com', 'https://www.care.com', 'https://www.yahoo.com'];
+               /*write the items in the url array  out on the webpage as working links */
+               document.write('<p> Here is a list of some of our users favorite urls:</p>');
+               document.write(`<p><a href="${urls[0]}">${urls[0]}<a/></p>`); 
+               document.write(`<p><a href="${urls[1]}">${urls[1]}<a/></p>`);
+               document.write(`<p><a href="${urls[2]}">${urls[2]}<a/></p>`);
+            </script>  
+            <p>Here is a new list of users' favorite urls, with yours included:</p>
+            <script>
+               var favUrl = prompt("Please input your favorite website url for a customized experience, styled as https://www.yourfavoritelink.com");
+               urls.push(favUrl);
+               urls.shift();
+               document.write(`<p><a href="${urls[0]}">${urls[0]}<a/></p>`);
+               document.write(`<p><a href="${urls[1]}">${urls[1]}<a/></p>`);
+               document.write(`<p><a href="${urls[2]}">${urls[2]}<a/></p>`);
+            </script>
+         </article>
+      </section>
+      </main>
+      <footer>
+         <address>
+            <p>Site deisgn by: <a href="mailto:e3678089@student.dcccd.edu">Mary Magdalene of Dallas College</a>.</p>
+            Visit us at:
+            <p><a href="https://www.dallascollege.edu">dallascollege.edu</a></p>
+            <p>123 Anyway</p>
+            <p>USA</p>
+         </address>
+      </footer>
+   </body>
+</html>

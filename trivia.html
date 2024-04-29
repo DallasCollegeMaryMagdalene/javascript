@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="../style.css">
+      <script src="js/trivia.js"></script>
+      <title>Trivia Game</title>
+   </head>
+   <body>
+      <header>
+         <h1>Mary Magdalene's Trivia Game</h1>
+      </header>
+      <nav>
+         <a href="index.html">JavaScript Home</a> | <a href="about.html">About Placeholder</a> | <a href="contact.html">Contact Placeholder</a> | <a href="quotes.html">Quotes</a> | <a href="secret-number-game.html">Secret Number Game</a> | <a href="quiz.html">Quiz</a> | <a href="trivia.html">Replay Trivia Game</a>
+      </nav>
+      <div>
+        <h2>Quote of the day</h2>
+        <script>
+         //call quoteOTD function
+         document.write("Today your quote is: " + quoteOTD() + ".");
+        </script> 
+        <h2>Results</h2>
+        <script>
+        //prompt user for their name
+        var name = prompt("Welcome, please enter your first name.");
+        //add name to the greeting and display it on the page
+        document.write("<p>Hi " + redoName(name) + ". And a " + returnGreeting() + "to you. Enjoy our site today. Please view your trivia quiz results below.</p>")
+
+        //prompt user for email address
+        var email = prompt("Thank you, now please enter your email address");
+        while (!validEmail(email)){
+           email = prompt("Invalid. Please enter your email address as user@domain.com");
+        }
+        if (validEmail(email)) {
+           document.write("<p>The email you entered is " + email + ". Your username for this site is " + emailSplit(email) + ".</p>");
+        } else {
+           document.write("<p>Email not submitted correctly " + email + ".</p>")
+        }
+        // call julieQuiz function
+        var score = julieQuiz();
+        // display the results on the screen
+        document.write('Your score is ' + score);
+        document.write(', which means you got' + scoreBoard(score) + 'of the total possible points');
+        document.write(`<h3>Today's date is ${wordMonth} ${day}, ${year}. It is ${hour}:${minute}</h3>`);
+        </script>
+      </div>
+    <footer>
+         <address>
+            <p>Site deisgn by: <a href="mailto:e3678089@student.dcccd.edu">Mary Magdalene of Dallas College</a>.</p>
+            Visit us at:
+            <p><a href="https://www.dallascollege.edu">dallascollege.edu</a></p>
+            <p>123 Anyway</p>
+            <p>USA</p>
+         </address>
+      </footer>
+   </body>
+</html>
